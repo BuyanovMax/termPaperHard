@@ -45,7 +45,7 @@ public class EmployeeBook {
     }
 
     public void findMinimalSalary() {
-        double min = Double.MAX_VALUE;
+        double min = emloyees[0].getSalary();
         int number = 0;
         for (int i = 0; i < emloyees.length; i++) {
             if (emloyees[i] != null && emloyees[i].getSalary() < min) {
