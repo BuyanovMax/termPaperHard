@@ -7,8 +7,6 @@ public class Employee {
     private double salary;
     private int id;
     private static int counter = 1;
-    static double indexSalary = 9.3875;
-    static int number = 25648;
 
     public Employee(String fullName, int department, double salary) {
         this.fullName = fullName;

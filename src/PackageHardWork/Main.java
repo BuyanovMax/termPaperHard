@@ -1,10 +1,6 @@
 package PackageHardWork;
 
-import static PackageHardWork.Employee.indexSalary;
-import static PackageHardWork.Employee.number;
-
 public class Main {
-
 
     public static void main(String[] args) {
 
@@ -43,16 +39,16 @@ public class Main {
         System.out.println(object.AverageSalaryByDepartment(2));
         System.out.println();
         System.out.println("Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра");
-        object.indexSalary2(1);
+        object.indexSalary2(1,9.598);
         System.out.println();
         System.out.println("Напечатать всех сотрудников отдела (все данные, кроме отдела)");
         object.printEmployees(2);
         System.out.println();
         System.out.println("Получить в качестве параметра число и найти всех сотрудников с зарплатой меньше числа (вывести id, Ф. И. О. и зарплатой в консоль).");
-        object.printNumberEmployees();
+        object.printNumberEmployees(26845);
         System.out.println();
         System.out.println("Получить в качестве параметра число и найти всех сотрудников с зарплатой больше (или равно) числа (вывести id, Ф. И. О. и зарплатой в консоль).");
-        object.printNumberEmployees2();
+        object.printNumberEmployees2(98548);
         System.out.println();
         System.out.println("Добавить нового сотрудника (создаем объект, заполняем поля, кладем в массив).\n" +
                 "Нужно найти свободную ячейку в массиве и добавить нового сотрудника в нее. Искать нужно всегда " +
@@ -60,11 +56,13 @@ public class Main {
         object.addNewEmployee("Елена Васильевна Вакуленко",2,65485);
         System.out.println();
         System.out.println("Удалить сотрудника (находим сотрудника по Ф. И. О. и/или id, обнуляем его ячейку в массиве)");
-        object.deleteEmployee();
+        object.deleteEmployee(5);
         System.out.println();
         System.out.println("5. Изменить сотрудника (получить сотрудника по Ф. И. О., модернизировать его запись): \n" +
-                "    1. Изменить зарплату");
-        object.modernEmployee("Пётр Михайлович Вакуленко",25684,4);
+                "Изменить зарплату и изменить отдел");
+        object.changeEmployee("Пётр Михайлович Вакуленко",5);
+        System.out.println();
+        object.changeEmployee1("Алена Петровна Свободная",95874);
         System.out.println();
         System.out.println("Получить Ф. И. О. всех сотрудников по отделам (напечатать список отделов и их сотрудников)");
         object.printFioDepartment();
